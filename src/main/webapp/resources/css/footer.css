@@ -1,0 +1,51 @@
+@charset "UTF-8";
+/*footer*/
+
+footer{
+	font-family: 'SeoulNamsanM';
+    height: 100px;
+    width: 100%;
+    /*position: absolute;*/
+    /*bottom: 0;*/
+    /*left: 0;*/
+     /*transform: translateY(-100%);*/
+    text-align: center;
+    margin: 0 auto;
+/*     padding-bottom: 20px; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+ 
+}
+
+footer>p{
+	display: flex;
+  margin: 10px auto;
+  align-items: center;
+}
+
+footer hr{
+  /*   color:#B2C8DF; */
+    margin-bottom: 15px;
+
+}
+footer ul{
+    margin-top: 5px;
+    color: #4d5154;
+
+
+		padding-bottom: 20px;
+}
+footer ul li{
+	  
+    display: inline-block;
+    list-style-type: none;
+    margin-right: 15px;
+
+
+}
+
+footer ul li a{
+    color: #4d5154;
+    padding-bottom:15px;
+}

@@ -1,0 +1,100 @@
+@charset "UTF-8";
+@import url('//fonts.googleapis.com/earlyaccess/jejugothic.css');
+@font-face {
+    font-family: 'SeoulNamsanM';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/SeoulNamsanM.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+/*신규 문의 본문 | 완료 문의 본문*/
+div.newFAQitem,
+div.completeFAQitem{
+    position:relative;
+}
+/* 문의 div 윗부분 */
+div.FAQitem-top{
+		font-family: 'SeoulNamsanM';
+    position: relative;
+    border-top: 2px solid #4e92f1;
+    border-bottom: 2px solid #4e92f1;
+    padding: 30px;
+    margin: 10px 10px 0px 10px;
+    background-color: rgb(231, 231, 231);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+div.FAQitem-top p.FAQnick{
+    font-size: 15px;
+    font-weight: bold;
+}
+
+div.FAQitem-top p.FAQDate{
+    font-size: 15px;
+    font-weight: bold;
+    color: #808080;
+}
+/* 문의 div 아래쪽 */
+div.FAQitem-bottom{
+    position: relative;
+    border-bottom: 2px solid #4e92f1;
+    padding: 10px;
+    margin: 0px 10px 35px 10px;
+    background-color: rgb(231, 231, 231);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+div.FAQitem-bottom img.faq_icon{
+    width: 30px;
+    height: 30px;
+    margin-left: 15px;
+    margin-right: 40px;
+}
+
+div.FAQitem-bottom textarea{
+		font-family:'SeoulNamsanM';
+		letter-spacing: 2px;
+    width: 330px;
+    height: auto;
+    min-height: 50px;
+    color: #808080;
+    font-size: 17px;
+    border: 1px solid #376fc2;
+    background-color: #fff;
+    outline: none;
+    resize:none;
+    padding:8px
+}
+
+div.FAQitem-bottom button{
+		font-family:'SeoulNamsanM';
+    padding: 5px;
+    margin-right: 14px;
+    font-size: 15px;
+    background-color:#CDC1FF;
+    border: none;
+    border-radius: 10px;
+}
+
+/*완료 문의 div.p*/
+div.FAQitem-bottom p:first-of-type{
+    font-weight: bold;
+    font-size: 18px;
+}
+div.FAQitem-bottom p:last-of-type{
+    font-size: 15px;
+    color: #808080;
+    margin-right: -30px;
+}
+
+/* 완료 문의 검은 막 */
+div.blackOverlay{
+    position: absolute;
+    top: 0;
+    left: 10px;
+    width: calc(100% - 20px);
+    height: 100%;
+    background:rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}

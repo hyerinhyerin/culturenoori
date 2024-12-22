@@ -1,0 +1,53 @@
+@charset "UTF-8";
+
+/*신규 신고 본문 | 처리 신고 본문*/
+div.reportitem,
+div.reporteditem{
+    position: relative;
+    border-top: 2px solid #4e92f1;
+    border-bottom: 2px solid #4e92f1;
+    padding: 30px;
+    margin: 10px 10px 35px 10px;
+    background-color: rgb(231, 231, 231);
+}
+
+div.reportitem>a,
+div.reporteditem>a{
+		font-family:'Jeju Gothic';
+    text-decoration: none;
+    color: #404041;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+div.reportitem>a p:first-of-type,
+div.reporteditem>a p:first-of-type{
+    font-weight: bold;
+}
+div.reportitem>a p:nth-of-type(2),
+div.reporteditem>a p:nth-of-type(2){
+    font-weight: bold;
+}
+
+div.reportitem>a p:last-of-type{
+    margin-right: 85px;
+}
+
+img.report-pass{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    right: 11.5%;
+    top: 33%;
+    /* margin-right: 10px; */
+    cursor: pointer;
+}
+
+img.report-blind{
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    right: 5%;
+    top: 26%;
+    cursor: pointer;
+}

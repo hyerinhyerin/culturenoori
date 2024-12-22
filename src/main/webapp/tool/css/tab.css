@@ -1,0 +1,60 @@
+@charset "UTF-8";
+
+
+.tab-menu {
+  display: flex;
+  border-bottom: 1px solid #ccc;
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+  background-color: #f1f1f1;
+  z-index: 1000; /* 다른 요소들보다 위에 표시되도록 설정 */
+}
+
+.tab-link {
+  background-color: #f1f1f1;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: background-color 0.3s;
+}
+
+.tab-link:hover {
+  background-color: #ddd;
+}
+
+.tab-link.active {
+  background-color: #ccc;
+}
+
+.tab-content {
+  display: none;
+  padding: 16px;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.tab-content.active {
+  display: block;
+  opacity: 1;
+}
+
+.form-search {
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 50px; /* tab-menu 높이만큼 아래로 설정 */
+  background-color: #f1f1f1; /* 배경색을 설정하여 고정된 부분이 눈에 잘 띄도록 합니다 */
+  z-index: 1000; /* 다른 요소들보다 위에 표시되도록 설정 */
+}
+
+.form-db-filter {
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 50px; /* tab-menu 높이만큼 아래로 설정 */
+  background-color: #f1f1f1; /* 배경색을 설정하여 고정된 부분이 눈에 잘 띄도록 합니다 */
+  z-index: 1000; /* 다른 요소들보다 위에 표시되도록 설정 */
+}
+
+      
+      

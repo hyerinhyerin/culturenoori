@@ -1,0 +1,227 @@
+@charset "UTF-8";
+@font-face {
+    font-family: 'SeoulNamsanM';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/SeoulNamsanM.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@import url('//fonts.googleapis.com/earlyaccess/jejugothic.css');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body{
+  height: 100%;
+}
+body{
+  min-height: 100%;
+  font-family: 'SeoulNamsanM';
+  background:#f8f8f8;
+}
+
+#container{
+  position: relative;
+  width: 85vw;
+  height: auto;
+/*   min-height: 100vh; */
+	margin:80px auto;
+}
+
+/*푸터 공간 남기는 것*/
+section{
+   /* padding-bottom: 85px; */
+   height: auto;
+/*     min-height: 780px; !*학원 모니터 기준*! */
+    padding-top:20px;
+}
+
+#section-container{
+  display: block;
+  height: auto;
+/*   margin-top: 30px; */
+  position: relative;
+}
+
+
+/* 글쓰기 본문 */
+div.write-container{
+  position: relative;
+  height: auto;
+/*   min-height: 685px; */
+}
+
+div.write{
+  /* display: inline-block; */
+  position: relative;
+  margin: 30px auto;
+  width: 52%;
+  height:auto;
+/*   min-height: 680px; */
+  border: 1.5px solid #6482AD;
+  border-radius: 35px;
+  background: #FEFEFE;
+}
+
+/* 본문 - 제목 */
+div.title{
+/*   margin-top: 30px; */
+  display: flex;
+  justify-content: center;
+}
+div.title p{
+  font-family:'Jeju Gothic';	
+  display: inline-block;
+  margin-right: 20px;
+  margin-top: 8px;
+  font-size: 24px;
+}
+div.title input{
+	font-family:'SeoulNamsanM';
+  width: 300px;
+  border: none;
+      padding: 10px 0px;
+  
+  font-size: 18px;
+  background-color: rgba(203, 220, 245, 0.24);
+  border-radius: 10px;
+  text-align: center;
+  color: rgb(17, 17, 17);
+  outline: none;
+}
+div.title input::placeholder{
+  color:#808080
+}
+
+/* 본문 - 카테고리 */
+div.category{
+  position: relative;
+/*   padding: 23px; */
+/*   margin-top: 10px; */
+}
+div.category select#noticPriority{
+/*   position: absolute; */
+  top: 27%;
+  right: calc(10% + 120px);
+  width: 100px;
+  padding: 3px;
+  font-size: medium;
+  border: 1px solid #4e92f1;
+  border-radius: 5px;
+  outline: none;
+}
+div.category select#boardCategory{
+/*   position: absolute; */
+  top: 27%;
+  right: 10%;
+  width: 100px;
+  padding: 3px;
+  font-family:'SeoulNamsanM';
+  font-size: medium;
+  border: 1px solid #4e92f1;
+  border-radius: 5px;
+  outline: none;
+}
+
+/* 본문 - 이미지 */
+
+div.content-image{
+/*   padding-top: 23px; */
+  margin-bottom: 20px;
+  display: flex;
+}
+
+
+div.content-image input{
+  position:absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  border: 0;
+}
+
+div.content-image label{
+  display: inline-block;
+  padding: 8px 10px 5px;
+  margin-left: 13%;
+  margin-top: 6px;
+  color: #fff;
+  background-color: #CDC1FF;
+  cursor: pointer;
+  width: 105px;
+  height: 30px;
+  border-radius: 10px;
+  font-size: 14px;
+  text-align: center;
+}
+
+div.content-image label:hover{
+  box-shadow: 0px 2px 2px #1a1d20;
+}
+
+/* 미리보기 */
+ul#imgPreview{
+  list-style-type: none;
+  display: flex;
+  margin-left: 10px;
+}
+
+ul#imgPreview li{
+  display: inline-block;
+  margin: 0 5px;
+}
+
+ul#imgPreview li img{
+  width: 45px;
+  height: 45px;
+  border: 1px solid #3885f0;
+  border-radius: 50%;
+}
+/* 본문 - 글 내용 */
+div.content textarea{
+  font-family: 'SeoulNamsanM';
+  display: block;
+  margin: 15px auto;
+  padding: 15px;
+  width: 80%;
+  height: 400px;
+  background-color: #e0edff;
+  border: none;
+  border-radius: 10px;
+  outline: none;
+  overflow: auto; /* 내용이 넘칠 때만 스크롤바 표시 */
+  white-space: normal; 
+  overflow-wrap: break-word; /* 단어가 길 경우 끊어서 줄바꿈 */
+  font-size: 18px;
+  resize: none;
+}
+
+#boardAddBtns{
+	display:flex;
+	justify-content:center;
+}
+
+/* 글 등록 버튼 */
+button#boardSubmitBtn,
+button#boardBackBtn{
+  /* position: absolute; */
+  font-family: 'SeoulNamsanM';
+  font-size: 18px;
+  padding: 8px;
+  border: none;
+  color: #fff;
+  background-color:#CDC1FF ;
+  border-radius: 10px;
+  /* bottom: 4%; */
+  /* left: 40%; */
+  margin:18px 30px;
+  width: 150px;
+  cursor:pointer;
+}
+
+button#boardSubmitBtn:hover,
+button#boardBackBtn:hover{
+  box-shadow: 0px 2px 2px #1a1d20;
+}

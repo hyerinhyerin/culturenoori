@@ -1,0 +1,222 @@
+@charset "UTF-8";
+@import url('//fonts.googleapis.com/earlyaccess/jejugothic.css');
+@font-face {
+    font-family: 'SeoulNamsanM';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/SeoulNamsanM.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    height: 100vh;
+}
+body{
+	font-family: 'SeoulNamsanM';
+    min-height: 100vh;
+    background:#f8f8f8;
+}
+
+.container{
+		position: relative;
+    width: 83vw;
+    height: auto;
+    min-height: 100vh;
+    margin: 80px auto 0px;
+}
+
+
+/*푸터 공간 남기는 것*/
+section{
+    padding-bottom: 85px;
+    height: auto;
+    min-height: 835px;
+}
+
+/* 본문 시작 */
+#section-container{
+    display: block;
+    width: 100%;
+    height: auto;
+    margin-top: 30px;
+    position: relative;
+}
+
+/*본문 게시판 목록 표시*/
+div.notify-admin p{
+    display: inline-block;
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 67px;
+}
+div.notify-admin hr{
+    width: 120px;
+    margin-top: 3px;
+    margin-left: 61px;
+    color: #4e92f1;
+}
+
+/* 본문 컨테이너 */
+div.section-body{
+    display: flex;
+    width:84vw;
+    margin: 0 auto;
+    height: auto;
+    margin-top:130px; 
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+/* 사이드 메뉴 */
+div#section-sidemenu{
+    position: relative;
+    display: inline-block;
+    width: 450px;
+    height: 500px;
+}
+div.sidemenu-container-faq{
+	 font-family: 'Jeju Gothic'; 
+    border: 2px solid #82b3f7;
+    border-radius: 15px;
+    position: absolute;
+    top: 10%;
+    left: 20%;
+    /*float: left;*/
+    width: 330px;
+    height: 380px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /*margin-top: 8%;*/
+    /*margin-left: 4%;*/
+}
+
+div.sidemenu-container{
+	 font-family: 'Jeju Gothic'; 
+    border: 2px solid #82b3f7;
+    border-radius: 15px;
+    position: absolute;
+    top: 20%;
+    left: 18%;
+    /*float: left;*/
+    width: 330px;
+    height: 380px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /*margin-top: 8%;*/
+    /*margin-left: 4%;*/
+}
+
+div.sidemenu-container>a{
+    text-decoration: none;
+    color: #1a1d20;
+    text-align: center;
+    width: 200px;
+    font-size: 23px;
+    font-weight: bold;
+    margin: 50px 0px;
+}
+div.sidemenu-container-faq>a{
+    text-decoration: none;
+    color: #1a1d20;
+    text-align: center;
+    width: 200px;
+    font-size: 23px;
+    font-weight: bold;
+    margin: 50px 0px;
+}
+
+
+/* 본문 컨텐츠 */
+
+div#section-content{
+    position: relative;
+    display: inline-block;
+    width: 800px;
+    height: auto;
+    min-height: 550px;
+/*     margin-left: 16%; */
+/*     margin-top: 6%; */
+}
+
+/*신규 신고 | 처리 신고 메뉴 탭*/
+ul.tabnav{
+    list-style: none;
+    margin-left: 25px;
+}
+
+ul.tabnav li{
+    background-color: #fff;
+    color: #404041;
+    border: 1px solid #82b3f7;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    display: inline-block;
+    width:100px;
+    height:auto;
+    text-align:center;
+    padding: 8px 12px;
+    margin-right: -6px;
+    margin-bottom:-2px;
+    cursor: pointer;
+}
+ul.tabnav li.current{
+    font-weight: bold;
+    font-size: 18px;
+}
+
+div.tab-content{
+    display: none;
+    border: 2px solid #82b3f7;
+    border-radius: 15px;
+    width: 1050px;
+    height: 600px;
+    min-height: 500px;
+    /* background-color: #4e92f1; */
+    padding: 15px;
+    margin-left:-50%;
+    overflow-y:scroll;
+}
+
+div.tab-content-faq{
+    display: none;
+    border: 2px solid #82b3f7;
+    border-radius: 15px;
+    width: 1050px;
+    height: 600px;
+    min-height: 500px;
+    /* background-color: #4e92f1; */
+    padding: 15px;
+    margin-left:-40%;
+    overflow-y:scroll;
+}
+
+div.tab-content-faq::-webkit-scrollbar,
+div.tab-content::-webkit-scrollbar{
+	width:15px;
+}
+div.tab-content-faq::-webkit-scrollbar-thumb,
+div.tab-content::-webkit-scrollbar-thumb{
+	background-color:#82b3f7;
+	border-radius:10px;
+}
+
+div.tab-content-faq::-webkit-scrollbar-track,
+div.tab-content::-webkit-scrollbar-track{
+	background-color:rgba(255,255,255,0);
+	border-radius:10px;
+}
+div.tab-content.current{
+    display: inherit;
+}
+div.tab-content-faq.current{
+    display: inherit;
+}

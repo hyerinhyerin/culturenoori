@@ -1,0 +1,199 @@
+20241013 - 정회광
+	툴에서 공연 포스터 및 스토리 이미지 다운로딩 변경
+		기존 : 툴에서 모든 이미지 다운로딩 - main페이지에서 실시간 로딩에 부하를 줄이기 위함
+		변경 : 포스터 이미지만 다운로딩 - 툴에서 DB갱신시간 단축됨
+		
+	서버에 포스터 및 스토리 이미지가 없으면 KOPIS에서 다운로드하게 변경
+		프로젝트 이름변경시 툴에서 DB갱신하는 불변함 제거
+
+			 
+	
+20241010 - 김지현
+	전체 색상 조정 및 faq, aboutus 페이지 위치 조정
+
+20241010 - 정혜린
+	커뮤니티, 회원가입, 로그인, 헤더 디자인 수
+	
+20241009 - 한형호
+	메인페이지(캘린더, 주간랭킹, 연극목록), 상세페이지 notion상 보완사항들 수정 완료(사소한 이슈는 notion에)
+	각종 잡다한 파일들 정리 완료
+
+20241008 - 정회광
+	관리자페이지 작업
+		신규신고, 처리신고 목록 
+		신고내용 클릭시 새탭으로 열림
+		관리자 페이지에서만 처리 가능
+		처리 - 패스, 블라인드
+		처리시 트리거 작업 -> 신고된 테이블 항목 변경
+	공연상세
+		예매링크 작업
+		지도 연결
+		
+20241008 - 한형호
+	wishlist관련 기능 추가
+		- performDetail.jsp // 좋아요 버튼 저장을 위한 isWished
+		- performDetail.js  // ajax통신을 통한 위시리스트에 저장 보조(??) 뭐지?
+		- wishlist.jsp		// wish, ViewPerform 참조하여 List 표시
+		- wishlistProc.jsp	// Json에 값 구겨넣어서 wishList.jsp에 보내기
+		  * 위시리스트를 위한 ViewPerformDAO, DTO 추가 => resource > sql > MakeView(perform_wish_performDetail).sql
+		    => wish와 user_email 비교작업 후 perform테이블의 공연명, Detail_Id, 시작일, 종료일, 이미지를 받고 perform_detail테이블의 venue_name을 받음
+		- 작업하다 보니 wishlist2.jsp 등 잡다한 파일들이 많아졌는데 너무 힘들어서 내일... 정리하겠습니다.
+		ㄴ 네 알겠습니다~~!! 4시까지.. 수고하셨어요@.@
+
+20241007 - 김지현
+	FAQ,QNA 완료
+	qna 답변 보이기
+	관리자 페이지에서 답변 등록
+
+20241007 - 정혜린
+	게시글 이미지 완료
+	마이페이지 > 내 활동과 계정 관리 완료
+
+
+20241004 - 정회광
+	db 필드 추가 반영 
+		- Dump20241004 (2).sql 
+		- tool, dao, dto
+	main.jsp
+		-calendar.jsp
+		-weeklyRanking.jsp
+	performDetail.jsp
+		-theaterDetail.jsp
+	
+	
+2024-10-04 - 김지현
+	faq기능
+
+20241004 - 정혜린
+	게시글 + 댓글 기능
+	/community/*
+	헤더 관리자/비회원/회원 구분 완료
+	/common/LoginManager.java - 관리자 계정 확인 추가 
+
+20241003 - 한형호
+	한줄평 보여주기 오류 해결 => reviewProc.jsp에 session으로부터 detailId 받아오기 추가
+	세션과 비교하여 로그인한 사람인 경우 자신의 한줄평에 수정, 삭제 버튼 표시 => 프론트는 아직 수정 전
+	수정 및 삭제 기능 구현 => 마찬가지로 프론트 수정 전
+
+20241002 - 한형호
+	reviewProc.jsp / ReviewDTO.java / ReviewDAO.java 를 통한 한줄평 작성기능 추가
+	한줄평 보여주기 오류(모든 댓글이 다나오는 문제) 해결중
+
+20241001 - 김지현
+	faq+QnA
+
+20241001 - 정회광
+	api
+
+20241001 - 한형호
+	좌우 여백, 헤더 정리 
+	
+20241001 - 정혜린
+	로그인 계정 찾기 기능 완료
+	header 로그인 여부에 따라 '로그인/회원가입'->'마이페이지/로그아웃' 되도록 수정
+	
+
+20240928 - 정혜린
+	header 위주로 css 임시로 조정함.
+	header와 header_filter를 분리함. (css는 header.css로 동일)
+	부트스트랩 cdn은 header_filter에만 포함함 > 부트스트랩 분리한 이유 : 기존 css와 엉킴
+	main.jsp, perform_detail.jsp 연극 관련 페이지에만 header_filter를 포함
+	
+
+20240927 - 정혜린
+	'ascent_092703' + 'CultureNoori_jh_092701' + 'CultureNoori_hhh_092704' + 'CultureNoori_jhr_092703' = 'ascent_092704'
+	faq 연결, 연극 페이지와 전체 로그인 페이지까지 연결 완료된 상태.
+
+2024/09/27 정혜린
+	"글 작성 페이지_boardAdd.jsp 
+	login.jsp 계정 저장하기 체크박스 추가
+	join.jsp 닉네임 유효성 ui로 보이게 수정. "
+
+20240927-김지현-
+	"FAQ 페이지 업로드."
+
+2024/09/27 한형호
+	프론트 파일 링크연결
+		메인페이지 <-> 헤더 <-> 로그인, 회원가입
+	프론트 디자인 수정
+	DB연계 들어갈 프론트 수정
+		공연리스트 => 주최 삭제, 상태 추가
+		공연장 정보 => 장소(지역) 삭제
+
+2024/09/27 정혜린
+	'ascent_092702' + 'CultureNoori_jh_092601' + 'CultureNoori_jhk_0926_02'='ascent_092703'
+	 병합 완료
+
+2024/09/27 정회광
+	실제로 사용할 디비 세팅 변경
+		culturenooridb -> culturenoori
+		이로인해 dto, dao, login, join등 변경됨
+		
+	실제로 사용할 관리자 계정 변경
+		테스트용 이메일에서 프로젝트 전용 이메일 계정으로 변경
+		codejoy2018@gmail.com -> ascent920@gmail.com
+		EmailSender.java 변경됨 : 소스안에 계정/비번 하드코딩
+	
+	join.jsp
+		요소 찾는 코드 변경
+		let element = document.getElementById(nameKey);		 
+
+20240927 - 정혜린
+ 'ascent_092701' + 'CultureNoori_jhr_092701'병합
+  수정 파일
+  	join.jsp
+  	join.js
+  	login.jsp
+  	login.js
+  	+.css 조금
+  	=> jsp파일에 있는 js코드들을 js파일에 분리하는 과정에서 코드 수정이 있었음
+  
+  
+20240927-정혜린 
+	"로그인, 회원가입 유효성 검사 및 부가 기능 login.js, join.js 추가 작성" 
+	
+2024/09/26-HHH-
+폴더구조 변경/ 주간랭킹 UI변경(마우스 이벤트)/ 주간랭킹, 상세페이지 별점 추가/ 상세페이지 탭메뉴 Ajax방식으로 수정/
+캘린더 오류로 잠시 제거(include시 Carousel깨짐현상 발생 → Ajax방식으로 변경하니 날짜변경이 안되는 오류 발생하여 코드 수정 -> 이젠 화살표만 눌러도 날짜가 자동으로 바뀌는 오류 발생하여 잠시 뺐습니다.)
+상세 페이지 좋아요 버튼 추가/ JS통해서 선택시 true, 해제시 false로 반환 확인 / 메인페이지 연극 목록 틀 제작
+	
+2024/09/26 김지현 - "사이트, 팀원 소개 페이지인 about-us > aboutus.jsp 작성"
+	
+2024/09/26 정회광 
+	임시 디비 세팅 
+		/resources/sql/user_temp.sql
+		WEB-INF/lib/mysql-connector-j-8.0.33.jar
+	
+	이메일 인증 관련 lib
+		WEB-INF/lib/jakarta.activation-2.0.0.jar
+		WEB-INF/lib/javax.activation-api-1.2.0.jar
+		WEB-INF/lib/javax.mail-1.6.2.jar
+		
+	JSON lib
+		WEB-INF/lib/json-20230227.jar
+	
+	추가/변경 파일
+		java
+			JDBConnect.java
+			LoginManager.java
+			BoardDAO.java <- 미완성 : 빌드에러 방지 때문에 미리 올림
+			BoardDTO.java
+			UserDAO.java
+			UserDTO.java
+			CookieManager.java
+			EmailSender.java
+			JSFunction.java
+		
+		webapp
+			join/accountCheckProc.jsp
+			join/join.jsp <- 변경됨
+			join/joinProc.jsp
+			join/sendEmailProc.jsp
+			login/login.jsp <-변경됨	
+			login/loginProc.jsp
+			login/logoutProc.jsp
+				
+	
+
+20240926-정혜린-
+"로그인/회원가입/마이페이지/관리자페이지/게시판 목록 페이지 업로드. 현재 jstl:c를 사용해서 jstl-1.2.jar 인식 필요" 

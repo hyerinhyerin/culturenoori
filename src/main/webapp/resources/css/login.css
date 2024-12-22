@@ -1,0 +1,433 @@
+@charset "UTF-8";
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    height: 100%;
+}
+body{
+    min-height: 100%;
+    background:#f8f8f8;
+}
+
+.container{
+    position: relative;
+    width: 100%;
+    height: auto;
+    min-height: 100vh;
+}
+
+/*푸터 공간 남기는 것*/
+section{
+		/*padding-bottom: 81px; */
+    height: auto;
+    padding-top: 80px;
+    width: 80%;
+    /* min-height: 780px; */
+    margin: 0px auto;
+    
+}
+
+/*본문*/
+div.login-wrapper{
+    display: block;
+    height: 468px;
+    margin-top: 30px;
+    position: relative;
+}
+
+/* div.notify-login p{ */
+/*     display: inline-block; */
+/*     width:84vw; */
+/*     font-size: 20px; */
+/*     font-weight: bold; */
+/*     margin-left: 67px; */
+/* } */
+/* div.notify-login hr{ */
+/*     width: 75px; */
+/*     margin-top: 3px; */
+/*     margin-left: 61px; */
+/*     color: #4e92f1; */
+/* } */
+
+/*로그인 폼*/
+
+
+.login-container {
+    display: block;
+    margin: 18.5% auto;
+    /* translate: 50% 50%; */
+    scale: 1.3;
+    width: 265px;
+}
+
+.login-input{
+    /*width: 300px;*/
+    margin: 50px auto;
+
+}
+
+
+.login-input input::placeholder {
+    color: #CBDCF5;
+}
+
+/* 닉네임 */
+
+.username {
+    position: relative;
+    width: 300px;
+    margin-bottom: 3px;
+}
+
+div.account_save{
+    position: absolute;
+    text-align: right;
+    top: -35px;
+    width: 265px;
+    padding: 5px;
+}
+
+
+.username label{
+    font-size: 12px;
+    color: #6c757d;
+}
+
+.username input[name="user_account"] {
+    height: 40px;
+    background: transparent;
+    border: 1px solid #CBDCF5;
+    border-radius: 4px;
+    outline: none;
+    padding-left: 24px;
+    width: 265px;
+    font-size: 13px;
+    font-family: inherit;
+    color: rgb(152, 148, 148, 0.96);
+    transition: 0.3s;
+}
+
+.username input:focus {
+    border-color: #578ddf;
+}
+
+.username input:focus ~ span {
+    color: #578ddf;
+}
+
+.username span {
+    position: absolute;
+    top: 50%;
+    left: 6px;
+    translate: 0 -50%;
+    font-size: 15px;
+    transition: 0.3s;
+    color: #CBDCF5;
+
+}
+
+/* .username .username-check{ */
+/*     position: absolute; */
+/*     right: 53px; */
+/*     top: 50%; */
+/*     translate: 0 -50%; */
+/*     transition: 0.3s; */
+/*     border: 1px solid #CBDCF5; */
+/*     border-radius: 8px; */
+/*     font-size: 10px; */
+/*     background-color: transparent; */
+/*     padding: 3px; */
+/*     color: #6c757d; */
+/*     height: 25px; */
+/* } */
+/*x표시 숨기기*/
+.username button {
+    background: transparent;
+    border: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0;
+    height: 100%;
+    width: 28px;
+    opacity: 0;
+    color: rgb(152, 148, 148, 0.96);
+    cursor: pointer;
+}
+
+.username button.visible {
+    opacity: 1;
+    right:38px;
+}
+
+/* 비밀번호*/
+
+.password {
+    position: relative;
+    width: 300px;
+    margin-bottom: 3px;
+}
+
+.password input {
+    height: 40px;
+    background: transparent;
+    border: 1px solid #CBDCF5;
+    border-radius: 5px;
+    outline: none;
+    padding-left: 24px;
+    width: 265px;
+    font-size: 13px;
+    font-family: inherit;
+    color: rgba(152, 148, 148, 0.96);
+    transition: 0.3s;
+}
+
+.password input:focus {
+    border-color: #578ddf;
+}
+
+.password input:focus ~ span {
+    color: #578ddf;
+}
+
+
+.password span {
+    position: absolute;
+    top: 50%;
+    left: 6px;
+    translate: 0 -50%;
+    font-size: 15px;
+    transition: 0.3s;
+    color: #CBDCF5;
+
+}
+
+.loginBtn{
+    width: 265px;
+    height: 35px;
+    margin-top: 20px;
+    background-color: #CBDCF5;
+    border: 1px solid #CBDCF5;
+    border-radius: 4px;
+    color: #f8f8f8;
+}
+
+.login-wrapper ul{
+    display: flex;
+    width: 265px;
+    justify-content: space-around;
+    margin-top: -35px;
+}
+.login-wrapper ul li{
+    list-style-type: none;
+}
+.login-wrapper ul li a{
+    text-decoration: none;
+    color: #4d5154;
+    font-size: 12px;
+    /*font-weight: bold;*/
+    border: 1px solid #CBDCF5;
+    border-radius: 5px;
+    padding:3px;
+}
+
+button#findUserBtn{
+    color: #4d5154;
+    font-size: 12px;
+    /*font-weight: bold;*/
+    border: 1px solid #CBDCF5;
+    border-radius: 5px;
+    padding:3px;
+    background-color: transparent;
+}
+
+/*비밀번호 찾기 팝업*/
+#findUser-popup{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -55%);
+    width: 448px;
+    /* height: auto; */
+    height: 328px;
+    background-color: #CBDCF5;
+    border-radius: 15px;
+    box-shadow: 3px 5px 5px #8c9091;
+    display: none;
+}
+
+
+#findUser-popup>h3{
+    text-align: center;
+    color: rgba(83, 80, 80, 0.96);
+    margin-top: 25px;
+}
+
+.findUser{
+    position: relative;
+}
+
+.findUser form{
+    display: flex;
+    flex-direction: column;
+}
+
+.findUser input::placeholder{
+    color: #c5d7f2;
+    text-align: center;
+}
+
+input[name="emailCode"]{
+	margin-left: -55px;
+  margin-right: 20px;
+}
+
+.findUser input{
+    position: relative;
+    /* margin: 30px 0px 0px 30px; */
+    color: #4d5154;
+    border-radius: 11px;
+    border: 1px solid #7c8fb3;
+    width: 248px;
+    height: 33px;
+    padding: 5px;
+    outline: none;
+    text-align: center;
+    font-size: 16px;
+}
+
+div.account,
+/* div.accountCheck, */
+div.pwdiv{
+    display: flex;
+/*     flex-direction: column; */
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    margin: 24px 10px;
+    text-align: center;
+}
+
+div.accountCheck{
+/*     display: none; */
+		height: auto;
+    margin: 20px 10px;
+    text-align: center;
+}
+
+button#emailBtn,
+button#emailCheck
+{
+    font-size: 14px;
+    border: 1px solid #CBDCF5;
+    border-radius: 14px;
+    background-color: #fff;
+/*     padding: 0px 8px; */
+    color: #6c757d;
+    cursor: pointer;
+/*     width: auto; */
+/*     height: 30px; */
+/*     line-height: 30px; */
+/*     margin-top: 15px; */
+}
+button#emailBtn{
+	width: 82px;
+	line-height: 17px;
+	padding: 1px 5px;
+	margin-left: 10px;
+}
+
+button#emailCheck{
+	padding: 6px 8px;
+ 	margin-right: -38px;
+}
+
+div.pwdiv{
+	
+}
+
+input[name="newpassword"]{
+/*     margin: 0px auto; */
+/*     display: none; */
+    margin-right: 88px;
+}
+
+p.pwMsg{
+    font-size: 11.5px;
+    color: #ff3636;
+    padding: 3px 10px;
+    display: none;
+    margin: 0 auto;
+}
+
+
+
+#findUser-account:focus{
+    /* text-align: center; */
+    color: #6c757d;
+}
+
+
+div.btns{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+}
+
+
+#completeBtn,#popupClose{
+    background-color: #5377ad5e;
+    font-size: 15px;
+    border: none;
+    border-radius: 10px;
+    width: 93px;
+    height: 30px;
+    margin: 20px 30px 20px;
+    cursor: pointer;
+}
+
+/* 존재하는 이메일, 닉네임일 때 팝업 */
+div.successPopup{
+    display: none;
+    position: absolute;
+    transform: translate(-50%, -62%);
+    top: 50%;
+    left: 50%;
+    background-color: #fff;
+    width: 340px;
+    height: 273px;
+    border-radius: 10px;
+    border: 1px solid #4e92f1;
+}
+div.successPopup>h5{
+    margin: 30px 30px 0px;
+    color: darkslateblue;
+    font-size: 18px;
+}
+div.successPopup>p{
+    font-size: 16px;
+    margin-top: 30px;
+    margin-left: 10px;
+    margin-bottom: 15px;
+    color: #4d5154;
+    text-align: center;
+}
+
+div.successPopup button.alertpopupClose{
+    background-color: #7fa5db;
+    border: none;
+    color: #fff;
+    padding: 5px 8px;
+    margin-left: 37%;
+    margin-top: 30px;
+    border-radius: 5px;
+    font-size: 15px;
+    width:90px;
+}
+
+

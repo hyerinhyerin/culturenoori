@@ -1,0 +1,222 @@
+@charset "UTF-8";
+@font-face {
+    font-family: 'SeoulNamsanM';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/SeoulNamsanM.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@import url('//fonts.googleapis.com/earlyaccess/jejugothic.css');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html, body{
+
+    height: 100%;
+}
+body{
+	  font-family: 'SeoulNamsanM'; 
+    min-height: 100%;
+    background-color:#f8f8f8;
+    
+}
+
+#container{
+		margin:80px auto 0px;	
+    position: relative;
+    width: 100%;
+    height: auto;
+/*     min-height: 100%; */
+    /*padding-bottom: 85px; /*footer높이*/
+}
+
+/*푸터 공간 남기는 것*/
+section{
+    margin: 0 auto;
+    width: 80%;
+    background: #f8f8f8;
+/*     padding-bottom: 85px; */
+    padding-top:1px;
+    height: 765px;
+}
+
+#section-container{
+    display: block;
+    height: auto;
+    margin-top: 70px;
+    position: relative;
+}
+
+
+/*본문 상단*/
+#section-top{
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    margin-top: 50px;
+}
+/*게시글 정렬*/
+div.board-sort label{
+		font-family:'jeju gothic';
+    font-size: 15px;
+    color:#4d5154;
+}
+div.board-sort select{
+	  font-family:'Jeju Gothic';
+    padding: 3px;
+    width: 90px;
+    color: #3C3D37;
+    border: 2px solid #6482AD;
+    border-radius: 5px;
+    outline: none;
+}
+
+div.board-sort select#bSort-category {
+	
+    width: 70px;
+}
+/*게시글 검색*/
+div.board-search{
+    position: relative;
+    width: 550px;
+}
+div.board-search form{
+    display: flex;
+    align-items: center;
+}
+
+div.board-search form select{
+		font-family:'Jeju Gothic';
+    width: 75px;
+    padding: 3px;
+    color: #3C3D37;
+    border: 2px solid #6482AD;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+div.boardSearchBtn input{
+		font-family:'SeoulNamsanM';
+    border: none;
+    border-bottom: 2px solid #7c8fb3;
+    padding-bottom: 8px;
+    font-size: 18px;
+    /*color: #7c8fb3;*/
+    outline: none;
+    text-align: center;
+    width: 280px;
+    margin-right: -5px;
+    padding-top: 7px;
+}
+
+div.boardSearchBtn span{
+    color: #7c8fb3;
+    margin-left: 10px;
+    cursor:pointer;
+}
+
+#searchButton{
+    border: none;
+    background: transparent;
+}
+
+/*글쓰기 버튼*/
+div.board-write #boardWriteBtn{
+		font-family:'SeoulNamsanM';
+    width: 80px;
+    height: 45px;
+    background-color:#CDC1FF ;
+    border: none;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+/*게시글 목록 테이블*/
+div#section-middle{
+    position: relative;
+    /*top: 50%;*/
+    /*left: 50%;*/
+    /*transform: translate(-50%, -50%);*/
+    /*width: 800px;*/
+}
+
+div#section-middle table{
+    margin: 30px auto 0;
+    text-align: center;
+    border-top: 2px solid #7c8fb3;
+    border-bottom: 2px solid #7c8fb3;
+    border-spacing: 0 0px;
+    width: 85%;
+    font-size: 20px;
+    padding: 5px;
+}
+
+div#section-middle table>thead>tr>th{
+    padding: 10px;
+    border-bottom: 2px solid #CBDCF5;
+}
+
+
+
+div#section-middle table>tbody>tr>td{
+    padding: 10px;
+    border-bottom: 2px solid #CBDCF5;
+}
+
+div#section-middle table>tbody>tr:last-child>td{
+    border-bottom: none;
+}
+
+div#section-middle table>tbody>tr>td:nth-child(3){
+    text-align: left;
+}
+
+.noticeBackground{
+    background-color: #e8e8e8;
+}
+
+div#section-middle table>tbody>tr{
+	transition: background-color 0.3s;
+	height:50px;
+}
+
+div#section-middle table>tbody>tr:hover{
+	background-color: rgba(203, 220, 245, 0.24);
+}
+
+.emptyRow{
+	height:50px;
+	background-color:transparent;
+}
+
+/*게시글 아래 이동 버튼*/
+div#section-bottom{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 45px;
+}
+div#section-bottom button{
+    margin: 0 10px;
+    padding: 5px;
+    font-size: 18px;
+    background-color: #fff;
+    border: 1px solid #e8e8e8;
+    border-radius: 8px;
+}
+
+div#section-bottom button:hover{
+    box-shadow: 2px 2px 7px #C4D7E0;
+}
+
+div#section-bottom button.clicked{
+    background-color:  #CDC1FF;
+    box-shadow: 2px 2px 7px #7E60BF;
+}

@@ -1,0 +1,479 @@
+@charset "UTF-8";
+@font-face {
+    font-family: 'SeoulNamsanM';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/SeoulNamsanM.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@import url('//fonts.googleapis.com/earlyaccess/jejugothic.css');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    height: 100%;
+}
+body{
+		font-family: 'SeoulNamsanM';
+    min-height: 100%;
+    background:#f8f8f8;
+}
+
+#container{
+    position: relative;
+    width: 84vw;
+    height: auto;
+    min-height: 100vh;
+    margin:80px auto 0px;
+}
+
+section{
+    /* padding-bottom: 85px; */
+    height: auto;
+/*     min-height: 780px; !*학원 모니터 기준*!*/
+		width:100%;
+		padding-top:20px;
+}
+
+#section-container{
+    display: block;
+    height: auto;
+/*     margin-top: 30px; */
+    position: relative;
+}
+
+
+
+/*게시글 영역*/
+div.board-container{
+    width: 100%;
+    height: auto;
+    position: relative;
+
+}
+
+/*게시글 영역 > 버튼 영역*/
+div#boardBtn{
+    position: relative;
+    width: 80%;
+    height: auto;
+    display: flex;
+    justify-content: flex-end;/* 버튼들을 오른쪽에 정렬 */
+    margin: 0px auto 20px;
+
+}
+
+div#boardBtn button{
+	font-family: 'Jeju Gothic';
+    font-size: 16px;
+    width: 83px;
+    height: 40px;
+    padding: 5px;
+    border-radius: 8px;
+    border: none;
+    margin-left: 20px;
+    background-color:#CDC1FF;
+    color: #121212;
+    cursor: pointer;
+}
+
+/*게시글 영역 > 본문 영역*/
+div#content-container{
+    position: relative;
+    width: 80%;
+    height: auto;
+    border: 2px solid #95abc8;
+    border-radius: 15px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+div#content-container p{
+    color:#3C3D37;
+}
+
+/*제목과 작성자*/
+div.content-top{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 85%;
+    margin: 30px auto;
+    padding: 10px 0;
+}
+
+div.content-top>div{
+    display: flex;
+    align-items: center;
+    background-color: rgba(203, 220, 245, 0.24);
+    border-radius: 15px;
+    padding: 10px 15px;
+}
+
+div.content-top>div>p{
+    color: #7f91f4;
+    margin-right: 5px;
+    font-size: 18px;
+}
+div.content-top>div>hr{
+    rotate: 90deg;
+    width: 20px;
+    /*margin-left: 5px;*/
+    /*margin-right: 5px;*/
+}
+
+button#boardReportBtn{
+	border: none;
+  background: transparent;
+}
+
+/*작성날짜와 좋아요 아이콘*/
+div.content-middle{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 85%;
+    margin: 0 auto;
+}
+
+/*좋아요 추천 아이콘*/
+span.likeIcon{
+    cursor: pointer;
+    margin-left: 15px;
+}
+
+span.likeIcon i.clicked{
+    color: #ff5b5b;
+}
+
+/*게시글 내용*/
+div.content-bottom{
+    position: relative;
+    width: 85%;
+    height: auto;
+    min-height: 450px;
+    background-color:#e0edff;
+    border-radius: 10px;
+    margin: 15px auto 30px;
+    text-align: center;
+}
+div.content-bottom img{
+    width: 50%;
+    height: 50%;
+}
+div#content-body{
+    margin: 35px 40px;
+    font-size: 18px;
+}
+
+
+/*댓글 영역*/
+div#comment-container{
+    position: relative;
+    width: 80%;
+    margin:0px auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
+div.commt-1 p.nick{
+	font-family:'Jeju Gothic';
+}
+div#comment-container>hr{
+    width: 85%;
+    margin: 20px auto;
+}
+
+
+
+/*댓글 입력 폼*/
+div.commentInput{
+    position: relative;
+    width: 85%;
+    margin: 60px auto 30px;
+/*     display: flex; */
+/*     flex-direction: column; */
+}
+div.commentInput p{
+    display: inline-block;
+    font-size: 15px;
+    color: #808080;
+    width: 85%;
+    margin:0 auto 10px;
+}
+div.commentInput form[name="commentForm"]{
+    display: flex;
+    width: 85%;
+    margin: 0 auto;
+}
+div.commentInput form>textarea{
+	font-family: 'SeoulNamsanM';
+    width: 100%;
+    height: 53px;
+    background-color:#e0edff;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    margin-right: 10px;
+    padding: 15px;
+    font-size: 15px;
+    color: #121212;
+    line-height: 1.5;
+    resize: none; /* 사용자 수동 크기 조정 방지 */
+    overflow: hidden; /* 스크롤바 숨김 */
+}
+
+div.commentInput form>button{
+		font-family:'Jeju Gothic';
+    font-size: 15px;
+    width: 63px;
+    height: 53px;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    background-color:#CDC1FF;
+    color: #121212;
+}
+
+
+
+/*댓글 아이템*/
+div.commentList{
+    position: relative;
+    width: 85%;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+
+}
+
+img.commentReport{
+	width:25px;
+	cursor:pointer;
+}
+
+/*댓글과 답글 전체*/
+div.commt-container{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 0 auto 10px;
+
+}
+
+/*댓글 div*/
+div.commentItem{
+    position: relative;
+    width: 100%;
+    min-height: 100px;
+    border-radius: 10px;
+    background-color: rgb(181, 207, 241);
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+/*답글 div*/
+div.recommentItem{
+    position: relative;
+    width: 90%;
+    border-radius: 10px;
+    background-color: rgb(181, 207, 241);
+    margin-left: auto;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+img.commentProfile{
+    width: 3.5em;
+    height: 3.5em;
+    margin: 20px 20px;
+    border-radius:50%;
+}
+
+div.commtItem-section{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin: 15px 0;
+}
+
+div.commt-1{
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+div.commt-2{
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+div.commt-2 p.commtDate{
+	font-family: 'Jeju Gothic';
+    margin-right: 15px;
+}
+/* div.commt-2 p.recommt{
+    margin-right: 15px;
+} */
+div.commt-2 button.recommt{
+	font-family: 'Jeju Gothic';
+    border: none;
+    margin-right: 15px;
+    outline: none;
+    background-color: transparent;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* 답글 입력 폼 */
+div.recommtInput{
+    position: relative;
+    width: 90%;
+/*     border-radius: 10px; */
+    margin-left: auto;
+    margin-bottom: 10px;
+    padding-top:10px;
+}
+
+
+div.recommtInput p{
+    display: inline-block;
+    font-size: 15px;
+    color: #808080;
+    width: auto;
+    margin-bottom: 8px;
+}
+
+button.closeRecomment{
+/*     font-size: 13px; */
+/*     padding: 6px; */
+/*     border: none; */
+/*     border-radius: 10px; */
+		margin-left:10px;
+}
+
+div.recommtInput form.recommentForm{
+    display: flex;
+    width: 100%;
+    /* margin: 0 auto; */
+}
+div.recommtInput form>textarea{
+		font-family:'SeoulNamsanM';
+    width: 100%;
+    height: 53px;
+    background-color: rgba(196, 214, 236, 0.664);
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    margin-right: 10px;
+    padding: 15px;
+    font-size: 15px;
+    color: #121212;
+    line-height: 1.5;
+    resize: none; /* 사용자 수동 크기 조정 방지 */
+    overflow: hidden; /* 스크롤바 숨김 */
+}
+div.recommtInput form>button{
+		font-family:'Jeju Gothic';
+    font-size: 15px;
+    width: 63px;
+    height: 53px;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    background-color: #CDC1FF;
+    color: #121212;
+}
+
+
+textarea.commt-textarea{
+	resize: none;
+  font-size: 15px;
+  padding: 0 5px;
+  outline: none;
+  /* background: rgba(196, 214, 236, 0.664); */
+  border: none;
+  border-radius: 3px;
+}
+
+p.notifyParent{
+   	margin-left: 12px;
+    color: #3C3C3C;
+    background: #FFFAF0;
+    border-radius: 6px;
+    /* background: #EBEBEB; */
+    padding: 2px 8px;
+}
+
+
+/*게시글 목록*/
+div#boardList{
+    position: relative;
+    height: auto;
+    margin-top: 50px;
+    width:100%
+}
+
+.report-message {
+		color: #333;
+    font-weight: normal;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    /* border: 1px solid #ffcccc; */
+    border-radius: 15px;
+    /* margin-top: 5px; */
+    /* display: inline-block; */
+    font-size: 0.9em;
+}
+
+
+/*목록 테이블*/
+div.boardList-container{
+    position: relative;
+    width: 80%;
+    margin: 0 auto 50px;
+}
+div.boardList-container table{
+    margin: 30px auto 0;
+    text-align: center;
+    border-top: 2px solid #7c8fb3;
+    border-bottom: 2px solid #7c8fb3;
+    border-spacing: 0 0px;
+    font-size: 20px;
+    padding: 5px;
+    width:100%;
+}
+
+div.boardList-container table>thead>tr>th{
+    padding: 10px;
+    border-bottom: 2px solid #CBDCF5;
+}
+
+/* div.boardList-container table>tbody>tr{ */
+/*     border: 2px solid red; */
+/* } */
+
+div.boardList-container table>tbody>tr>td{
+    padding: 10px;
+    border-bottom: 2px solid #CBDCF5;
+}
+
+div.boardList-container table>tbody>tr:last-child>td{
+    border-bottom: none;
+}
+
+div.boardList-container table>tbody>tr>td:nth-child(3){
+    text-align: left;
+}
+
+tr.currenboardList{
+    background-color: rgba(151, 175, 193, 0.32);
+}

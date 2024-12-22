@@ -1,0 +1,234 @@
+@charset "UTF-8";
+@import url('//fonts.googleapis.com/earlyaccess/jejugothic.css');
+@font-face {
+    font-family: 'SeoulNamsanM';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/SeoulNamsanM.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+body{
+	font-family:'SeoulNamsanM';
+	margin-top:80px;
+}
+#detail_container{
+    display: grid;
+    width: 1300px;
+    grid-template-columns: 502px 130px 398px 250px; 
+    grid-template-rows: 40px 55px 60px  64px 64px 64px 64px 64px 64px; height: 570px;
+    height: 570px;
+}
+
+#perform_imgbox{
+    grid-row: span 9;
+    height: 100%;
+/*    	border-radius: 5px; */
+}
+
+#detail_container div h4{
+    color: blueviolet;
+    text-decoration: underline;
+    text-decoration-color: blueviolet;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 5px;
+}
+
+.site_link{
+    height: 50%;
+}
+
+#detail_container:nth-child(4){
+    grid-row: span 2;
+}
+
+.empty {
+    grid-column: span 3;
+}
+
+#detail_container:nth-child(4) button{
+    height: 50%;
+}
+
+.perform_title{
+    word-break: keep-all; /* 단어 단위로 줄바꿈 */
+    word-wrap: break-word; /* 필요한 경우 단어를 분할 */
+    white-space: normal; /* 일반적인 줄바꿈 허용 */
+}
+
+.column_span{
+    grid-column: span 2;
+}
+
+#detail_container div h5{
+	font-family:"Jeju Gothic";
+    width: 100%;
+    height: 100%;
+}
+
+#review{
+    height: 100px;
+    resize: none;
+}
+
+#review_textarea button{
+    width: 10%;
+}
+
+
+#profile{
+    width: 128px;
+    height: 128px;
+    margin-bottom:10px !important; 
+}
+#profile >img{
+	width:128px;
+	height:128px;
+	border:solid 1px gray;
+	border-radius:100%;
+}
+
+#profile>div>svg{
+	width: 134px;
+  height: 134px;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+.review_content{
+    width: 950px;
+    height: 140px;
+}
+
+.review_subcontent button{
+    width:80px;
+    font-family: 'Jeju Gothic';
+}
+
+
+/* tabmenu.css */
+.tab_btn{
+    width: 1300px;
+}
+
+.tab_name{
+    width: 200px;
+    height: 45px;
+    cursor: pointer;
+    transition: color 0.5s;
+}
+
+.tab_content>div{
+    display: none;
+    width: 1300px;
+    height: auto;
+}
+
+.tab_name h3{
+	/* font-family:'Jeju-Gothic'; */
+    height: 100%;
+    margin: 0;
+}
+
+ h5 {
+	 font-family:'Jeju-Gothic';
+} 
+.tab_name > h3.active{
+		font-family:'Jeju Gothic';
+    background-color: #fff;
+}
+
+.tab_content > div.active{
+    display: block;
+}
+
+.vr{
+    outline-color: blue;
+}
+
+.tab_name:hover{
+    color: #0d6efd;
+}
+
+.underline_container{
+    width: 1300px;
+}
+
+.underline_container>div{
+    width: 120px;
+}
+div.delete{
+    width: 198px;
+}
+
+
+/* theater.css */
+.theater_container{
+    width: 1300px;
+    height: auto;
+}
+
+.theater_detail{
+    display: grid;
+    grid-template-rows: 64px 64px 64px 64px 450px;
+    grid-template-columns: 150px 1150px;
+}
+
+.theater_detail div h4{
+    width: 100%;
+    height: 100%;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: #f5f5f5;
+}
+
+.map_field{
+    width: 1300px;
+}
+
+.star-container{
+	display : flex;
+	align-items:center;
+	
+}
+.star-container > span{
+	margin-top : -5px;
+}
+.star-container > p{ 
+	margin-top : 10px;
+	padding-top : 10px;
+}
+.rating_star{
+	font-size : 2rem;
+	color:#ccc;
+}
+
+.rating_star.filled{
+	color:goldenrod;
+}
+
+.like-button {
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #ccc;
+    margin-top: 0;
+}
+.like-button.checked {
+    color: #e74c3c;
+    margin-top: 0;
+}
+
+/* -------------------------------------------- */
+
+/* ���Ż���Ʈ �ٷΰ���  */
+.my-auto {
+    font-family:'Jeju Gothic' !important;
+ /*    background-color:#a899f1 !important; */
+    /* border:2px solid #7E60BF !important; */
+}
+
+.perform-name {
+	font-family:'Jeju Gothic' !important;
+}
+
+
+
+

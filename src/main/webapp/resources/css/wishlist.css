@@ -1,0 +1,184 @@
+@charset "UTF-8";
+@font-face {
+    font-family: 'SeoulNamsanM';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/SeoulNamsanM.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@import url('//fonts.googleapis.com/earlyaccess/jejugothic.css');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    height: 100vh;
+}
+body{
+	font-family: 'SeoulNamsanM';
+    min-height: 100vh;
+    background:#f8f8f8;
+}
+
+.container{
+    position: relative;
+    width: 84vw;
+    height: auto;
+    min-height: 100vh;
+    /*padding-bottom: 85px; /*footer높이*/
+}
+
+
+/*푸터 공간 남기는 것*/
+section{
+	padding-top: 80px;
+    margin-bottom: 40px;
+    height: 800px; 
+}
+
+/* 본문 시작 */
+#section-container{
+    display: block;
+    width: 100%;
+    height: auto; 
+    margin: 0 auto;
+    position: relative;
+}
+
+
+/*본문 게시판 목록 표시*/
+div.notify-mypage p{
+    display: inline-block;
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 67px;
+}
+div.notify-mypage hr{
+    width: 120px;
+    margin-top: 3px;
+    margin-left: 61px;
+    color: #4e92f1;
+}
+
+/* 본문 컨테이너 */
+div.section-body{
+    display: flex;
+    margin: 0 auto;
+    width:84vw;
+    height: auto;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+/* 사이드 메뉴 */
+div#section-sidemenu{
+    position: relative;
+    display: inline-block;
+    width: 450px;
+    height: 500px;
+}
+div.sidemenu-container{
+	font-family: 'Jeju Gothic';
+    border: 2px solid #82b3f7;
+    border-radius: 15px;
+    position: absolute;
+    top: 20%;
+    left: 18%;
+    /*float: left;*/
+    width: 330px;
+    height: 380px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /*margin-top: 8%;*/
+    /*margin-left: 4%;*/
+}
+
+div.sidemenu-container>a{
+    text-decoration: none;
+    color: #1a1d20;
+    text-align: center;
+    width: 200px;
+    font-size: 23px;
+    font-weight: bold;
+    margin-bottom: 50px;
+}
+
+/* 본문 컨텐츠 */
+
+div#section-content{
+		font-family:'SeoulNamsanM';
+    position: relative;
+    display: inline-block;
+    width: 65%;
+    min-height: 550px;
+    height:650px ;
+    border: 2px solid #82b3f7;
+    border-radius: 15px;
+    margin-right:80px;
+    margin-top: 2%;
+    background-color: white;
+    overflow-y:scroll;
+}
+div#section-content::-webkit-scrollbar{
+	width:15px;
+}
+div#section-content::-webkit-scrollbar-track{
+	background-color:rgba(255,255,255,0);
+	border-radius:10px;
+}
+
+div#section-content::-webkit-scrollbar-thumb{
+	background-color:#82b3f7;
+	border-radius:10px;
+}
+#wish_content{
+	display:flex;
+	flex-wrap:wrap;
+	justify-content:space-between;
+}
+/* 위시리스트 */
+.list_item{
+    width: 45%;
+    height: 200px;
+	margin:10px 5px;
+	border-color:#4e92f1;
+}
+
+.list_item_img{
+    width: 101px !important;
+    height: 142px !important;
+}
+
+.list_item_img img{
+    width: 100%;
+    height: 100%;
+}
+.list_item_detail p{
+    width: 350px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    word-break: keep-all;
+    margin: 0;
+    padding: 0;
+    font-size:13px;
+}
+
+.item_title{
+    font-size: 20px !important;
+    font-weight: 600;
+}
+
+.item_date, .item_theater, .item_company{
+    color: #6f6f6f
+}
+
+.perform_status{
+	display:inline-block;
+	padding: 0 5px;
+	text-align:center;
+}

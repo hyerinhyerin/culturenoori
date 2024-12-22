@@ -1,0 +1,309 @@
+@charset "UTF-8";
+@font-face {
+    font-family: 'SeoulNamsanM';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/SeoulNamsanM.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@import url('//fonts.googleapis.com/earlyaccess/jejugothic.css');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body{
+    height: 100vh;
+}
+body{
+  font-family: 'SeoulNamsanM';		
+    min-height: 100vh;
+  background:#f8f8f8;
+}
+
+.container{
+    position: relative;
+    width: 84vw;
+    height: auto;
+    min-height: 100vh;
+    /*padding-bottom: 85px; /*footer높이*/
+}
+
+
+/*푸터 공간 남기는 것*/
+section{
+/* 	padding-top: 80px; */
+    margin-bottom: 78px;
+    height: 800px; 
+}
+
+/* 본문 시작 */
+#section-container{
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  position: relative;
+}
+
+/*#section-container::after{*/
+/*  content: "";*/
+/*  display: block;*/
+/*  clear: both;*/
+/*}*/
+
+/*본문 게시판 목록 표시*/
+div.notify-mypage p{
+  display: inline-block;
+  font-size: 20px;
+  font-weight: bold;
+  margin-left: 67px;
+}
+div.notify-mypage hr{
+  width: 120px;
+  margin-top: 3px;
+  margin-left: 61px;
+  color: #4e92f1;
+}
+
+/* 본문 컨테이너 */
+div.section-body{
+    display: flex;
+    margin: 0 auto;
+    width:84vw;
+    height: 770px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* 사이드 메뉴 */ 
+div#section-sidemenu{
+  position: absolute;
+  top:25%;
+  display: inline-block;
+  width: 450px;
+  height: 500px;
+}
+
+div.sidemenu-container{
+	font-family: 'Jeju Gothic';
+  border: 2px solid #82b3f7;
+  border-radius: 15px;
+  position: absolute;
+  top: 20%;
+  left: 18%;
+  /*float: left;*/
+  width: 330px;
+  height: 380px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+div.sidemenu-container>a{
+  text-decoration: none;
+  color: #1a1d20;
+  text-align: center;
+  width: 200px;
+  font-size: 23px;
+  font-weight: bold;
+  margin-bottom: 50px;
+}
+
+/* 본문 컨텐츠 */
+div#section-content{
+  position: absolute;
+  display: inline-block;
+  top:0%;
+  left:33%;
+  width: 55%;
+  height: 650px;
+  min-height: 550px;
+  margin-right:80px;
+  margin-top: 8%;
+}
+
+ul.tabnav{
+  list-style: none;
+  margin-left: 25px;
+}
+
+ul.tabnav li{
+  background-color: #fff;
+  color: #404041;
+  border: 1px solid #82b3f7;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  display: inline-block;
+  padding: 8px 12px;
+  margin-right: -6px;
+  cursor: pointer;
+  width:100px;
+  text-align:center;
+  margin-bottom:-1px;
+}
+ul.tabnav li.current{
+  font-weight: bold;
+  font-size: 18px;
+}
+
+div.tab-content{
+  display: none;
+  border: 2px solid #82b3f7;
+  border-radius: 15px;
+  min-height: 500px;
+  height: 650px; 
+  /* background-color: #4e92f1; */
+  padding: 15px;
+  overflow-y:scroll;
+}
+div.tab-content::-webkit-scrollbar{
+	width:15px;
+}
+div.tab-content::-webkit-scrollbar-thumb{
+	background-color:#82b3f7;
+	border-radius:10px;
+}
+
+div.tab-content::-webkit-scrollbar-track{
+	background-color:rgba(255,255,255,0);
+	border-radius:10px;
+}
+
+
+div.tab-content.current{
+  display: inherit;
+}
+
+
+/* 게시글 목록 아이템 */
+
+/* 게시글 목록, 한줄평, 댓글 아이템 container */
+div.boarditem,
+div.reviewitem,
+div.commentitem{
+  position: relative;
+  border-top: 2px solid #4e92f1;
+  border-bottom: 2px solid #4e92f1;
+  padding: 30px;
+  margin: 10px 10px 35px 10px;
+  background-color: rgb(231, 231, 231);
+  overflow-y:scroll;
+}
+
+div.boarditem>a,
+div.reviewitem>a,
+div.commentitem>a{
+  text-decoration: none;
+  color: #404041;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+div.boarditem a h3,
+div.reviewitem a h3,
+div.commentitem a h3{
+  width:110px;
+}
+
+
+div.boarditem a p:first-of-type,
+div.reviewitem a p:first-of-type,
+div.commentitem a p:first-of-type {
+/*   margin-right: 120px; */
+  width:245px;
+}
+div.boarditem a p:nth-of-type(2),
+div.reviewitem a p:nth-of-type(2),
+div.commentitem a p:nth-of-type(2) {
+/*   margin-right: 70px; */
+  width:155px;
+}
+
+img.boardEdit,
+img.reviewEdit,
+img.commentEdit{
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  right: 10%;
+  top: 33%;
+  margin-right: 10px;
+  cursor: pointer;
+}
+img.boardDelete,
+img.reviewDelete,
+img.commentDelete{
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  right: 5%;
+  top: 33%;
+  cursor: pointer;
+}
+
+
+button.editsavebtn{
+	position: absolute;
+	padding: 2px;
+	width: 40px;
+	height: 40px;
+	right: 9%;
+	top: 29%;
+	border: none;
+	background: rgb(231, 231, 231);
+	margin-right: 10px;
+  cursor: pointer;
+}
+
+/* 신고 처리 알림 */
+span.report{
+  position:absolute;
+  top: -20%;
+  right: 0;
+  padding: 3px 10px;
+  /* color: #fff; */
+  color: rgba(255, 31, 31, 0.5);
+  background-color: rgba(255, 255, 255, 0.9);
+  font-weight: 600;
+}
+
+
+/* 연극 한줄평 목록 평점 */
+div.rating-container{
+  width: 110px;
+  height: 48px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+div.rating{
+  position: absolute;
+  margin-top: 45px;
+}
+div.rating h3{
+  display: inline-block;
+  width: 150px;
+}
+span.star{
+  font-size: 20px;
+  color: #daa520;
+  cursor: pointer;
+}
+
+
+/* 댓글 탭 item */
+div.commentitem>a>h3{
+  font-size: 18px;
+  margin-left: 25px;
+}
+
+img.commentImg{
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  left: 3%;
+  cursor: pointer;
+}

@@ -1,0 +1,336 @@
+@charset "UTF-8";
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body{
+    height: 100%;
+}
+body{
+    min-height: 100%;
+    background:#f8f8f8;
+}
+
+#container{
+    position: relative;
+    margin: 85px auto 0px;
+    width: 80%;
+    height: auto;
+/*     min-height: 100%; */
+    /* padding-bottom: 85px; /*footer높이 */
+
+}
+
+/*푸터 공간 남기는 것*/
+section{
+/*     padding-bottom: 85px; */
+    height: auto;
+/*     min-height: 780px;!*학원 모니터 기준*! */
+		padding-top:80px;
+}
+
+/*본문*/
+.join-container{
+    display: block;
+    height: 545px;
+    margin-top: 30px;
+    position: relative;
+}
+
+/* div.notify-join p{ */
+/*     display: inline-block; */
+/*     font-size: 20px; */
+/*     font-weight: bold; */
+/*     margin-left: 67px; */
+/* } */
+/* div.notify-join hr{ */
+/*     width: 90px; */
+/*     margin-top: 3px; */
+/*     margin-left: 61px; */
+/*     color: #4e92f1; */
+/* } */
+
+/*로그인 폼*/
+
+
+.signup-container {
+    display: block;
+    margin: 8% auto;
+    /*translate: 50% 50%;*/
+    scale: 1.3;
+    width: 252px;
+}
+
+.signup-input{
+    /*width: 300px;*/
+    margin: 50px auto;
+
+}
+
+
+.signup-input input::placeholder {
+    color: #CBDCF5;
+}
+
+/* 닉네임 */
+
+.username {
+    position: relative;
+    width: 300px;
+    margin-bottom: 3px;
+}
+
+.username input {
+    height: 28px;
+    background: transparent;
+    border: 1px solid #CBDCF5;
+    border-radius: 4px;
+    outline: none;
+    padding-left: 24px;
+    width: 250px;
+    font-size: 15px;
+    font-family: inherit;
+    color: rgb(152, 148, 148, 0.96);
+    transition: 0.3s;
+}
+
+.username input:focus {
+    border-color: #578ddf;
+}
+
+.username input:focus ~ span {
+    color: #578ddf;
+}
+
+.username span {
+    position: absolute;
+    top: 50%;
+    left: 6px;
+    translate: 0 -50%;
+    font-size: 15px;
+    transition: 0.3s;
+    color: #CBDCF5;
+
+}
+
+.username p.nickcheckMsg{
+    font-size: 10px;
+    color: #FF5A5A;
+    padding: 3px 10px;
+    display: none;
+}
+
+button.username-check{
+    position: absolute;
+    right: 53px;
+    top: 50%;
+    translate: 0 -50%;
+    transition: 0.3s;
+    border: 1px solid #CBDCF5;
+    border-radius: 8px;
+    font-size: 10px;
+    background-color: transparent;
+    padding: 3px;
+    color: #6c757d;
+    cursor: pointer;
+}
+
+
+/* 비밀번호*/
+
+.password {
+    position: relative;
+    width: 300px;
+    margin-bottom: 3px;
+}
+
+.password input {
+    height: 28px;
+    background: transparent;
+    border: 1px solid #CBDCF5;
+    border-radius: 5px;
+    outline: none;
+    padding-left: 24px;
+    width: 250px;
+    font-size: 15px;
+    font-family: inherit;
+    color: rgba(152, 148, 148, 0.96);
+    transition: 0.3s;
+}
+
+.password input:focus {
+    border-color: #578ddf;
+}
+
+.password input:focus ~ span {
+    color: #578ddf;
+}
+
+.password input:invalid,
+.password input:invalid ~ span {
+    animation: shake 0.125s 4 both;
+}
+
+.password span {
+    position: absolute;
+    top: 50%;
+    left: 6px;
+    translate: 0 -50%;
+    font-size: 15px;
+    transition: 0.3s;
+    color: #CBDCF5;
+
+}
+
+.password p.pwMsg{
+    font-size: 10px;
+    color: #FF5A5A;
+    padding: 3px 10px;
+    display: none;
+}
+
+@keyframes shake {
+    25% {
+        margin-left: -3px;
+    }
+    75% {
+        margin-left: 3px;
+    }
+}
+
+/*비밀번호 확인*/
+.pw-check{
+    margin-bottom: 50px;
+}
+
+.pw-check span{
+    top: 50%;
+}
+.pw-check p.pwcheckMsg{
+    position: absolute;
+    left: 10px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    display: none;
+    color: #FF5A5A;
+    font-size: 10px;
+}
+
+/* 이메일 */
+
+.email {
+    position: relative;
+    width: 300px;
+    margin-bottom: 3px;
+}
+
+.email input {
+    height: 28px;
+    background: transparent;
+    border: 1px solid #CBDCF5;
+    border-radius: 4px;
+    outline: none;
+    padding-left: 8px;
+    width: 250px;
+    font-size: 15px;
+    font-family: inherit;
+    color: rgb(152, 148, 148, 0.96);
+    transition: 0.3s;
+}
+
+.email input:focus {
+    border-color: #578ddf;
+}
+
+.email input:focus ~ span {
+    color: #578ddf;
+}
+
+.email :is(label,span) {
+    position: absolute;
+    top: 50%;
+    translate: 0 -50%;
+}
+
+.email label {
+    left: 4px;
+    font-size: 12px;
+    padding: 0 4px;
+    pointer-events: none;
+    color: #CBDCF5;
+    background: transparent;
+    transition: 0.3s;
+}
+
+.email input:is(:valid, :focus) ~ label {
+    scale: 0.8;
+    translate: -5px -30px;
+    color: #578ddf;
+}
+
+.email span {
+    position: absolute;
+    right: 58px;
+    font-size: 15px;
+    transition: 0.3s;
+    color: #CBDCF5;
+    top: 50%;
+
+}
+
+/* 이메일 중복확인 버튼 */
+
+button.emailCheckBtn,button.emailBtn{
+    position: absolute;
+    font-size: 10px;
+    
+    /* top: 50%; */
+    /* translate: 0 -50%; */
+    /* transition: 0.3s; */
+    border: 1px solid #CBDCF5;
+    border-radius: 8px;
+    background-color: transparent;
+    padding: 3px;
+    /* margin-left: 5px; */
+    color: #6c757d;
+    cursor: pointer;
+}
+button.emailCheckBtn{
+    bottom: 100%;
+    right: 43%;
+    margin-bottom: 5px;
+}
+
+/*이메일 인증번호 발송 버튼*/
+button.emailBtn{
+    width: 75px;
+    /* height: 20px; */
+    bottom: 100%;
+    right: 17%;
+    margin-bottom: 5px;
+}
+
+/*인증번호*/
+
+.email-check span {
+    position: absolute;
+    right: 58px;
+    font-size: 15px;
+    transition: 0.3s;
+    color: #CBDCF5;
+    top: 50%;
+
+}
+
+.joinBtn{
+    width: 250px;
+    height: 35px;
+    margin-top: 20px;
+    background-color: #CBDCF5;
+    border: 1px solid #CBDCF5;
+    border-radius: 4px;
+    color: #fff;
+    cursor: pointer;
+}
+
